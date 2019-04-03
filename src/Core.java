@@ -9,6 +9,7 @@ public class Core {
 		System.out.println("kaas");
 		System.out.println("Rick");
 		System.out.println("Thomas");
+		System.out.println("PlakjeRobin");
 	}
 	
 }
