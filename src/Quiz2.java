@@ -21,6 +21,7 @@ public class Quiz2{
 		System.out.print(Quiz2.x + ", ");
 		Quiz2.resetX(10);
 		System.out.println(Quiz2.x);
+		System.out.println();
 	}
 	
 }
