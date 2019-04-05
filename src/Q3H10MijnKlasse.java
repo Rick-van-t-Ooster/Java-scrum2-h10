@@ -13,7 +13,10 @@ public class Q3H10MijnKlasse(){
 
     public static void main(String[]args){
         MijnKlasse mk1 = new MijnKlasse();
-
-        }
+        MijnKlasse mk2 = new MijnKlasse();
+        MijnKlasse mk3 = new MijnKlasse();
+        mk1.mijnMethode(3);
+        System.out.print(mk2.x + ", " + mk1.y);
+    }
 }
 
