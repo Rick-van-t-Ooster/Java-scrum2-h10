@@ -1,4 +1,4 @@
-public class Q3H10MijnKlasse(){
+public class Q3H10MijnKlasse() {
     static int x = 6;
     int y = 3;
 
