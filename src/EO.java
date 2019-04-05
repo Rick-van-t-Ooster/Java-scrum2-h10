@@ -1,5 +1,3 @@
-
-
 public class EO {
 
 	public static void main(String[] args) {
