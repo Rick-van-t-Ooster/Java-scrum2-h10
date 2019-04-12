@@ -10,7 +10,7 @@ import java.util.*;
 public class EindOpdracht {
 
 	public static void main(String [] args) {
-		System.out.println("Om iets toe te voegen, type T, om iets te verwijderen toets V: ");
+		System.out.println("Om iets toe te voegen, type T, om de lijst weer te geven toets R, om iets te verwijderen toets V: ");
         Scanner keuze = new Scanner(System.in);
         String input = keuze.nextLine();
         
@@ -30,6 +30,9 @@ public class EindOpdracht {
         System.out.println(string);
         verwijder("lijst.txt", string);
 	}
+        else if(input.equalsIgnoreCase("R")) {
+        	geefLijst("lijst.txt");
+        }
         else {
         	System.out.println("ongeldige input");
         	main(null);
@@ -88,8 +91,30 @@ public class EindOpdracht {
 	}
 	
 	
-	//TODO een method voor weergeven van een lijst
-	
+	// method voor weergeven van een lijst
+	public static void geefLijst(String bestand) {
+		try {
+			//bufferedReader voor het inlezen van het bestand
+			BufferedReader reader = new BufferedReader(new FileReader(new File(bestand)));
+			String regel;
+			int woordNummer =0;
+			while((regel = reader.readLine())!=null) {
+				//output van de regels in de lijst.
+				System.out.println(woordNummer + " | " + regel);
+				//increment van woordNummer.
+				woordNummer++;
+			}
+			reader.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
 	
 	//einde method area
 	
